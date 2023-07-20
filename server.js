@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: ['https://harivmasoor.github.io', 'https://podify-two.vercel.app'],
+    origin: ['https://harivmasoor.github.io', 'https://podify-backend.vercel.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
