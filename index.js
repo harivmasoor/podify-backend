@@ -54,7 +54,8 @@ app.get('/', (req, res) => {
     res.send('Server is up and running!');
     const clientId = process.env.CLIENT_ID;
     const clientSecret = process.env.CLIENT_SECRET;
-  
+    console.log('clientId:', clientId);
+    console.log('clientSecret:', clientSecret);
     res.send(`
       <html>
         <head>
