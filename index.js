@@ -52,6 +52,24 @@ app.post('/spotify/token', async (req, res) => {
 
 app.get('/', (req, res) => {
     res.send('Server is up and running!');
+    const clientId = process.env.CLIENT_ID;
+    const clientSecret = process.env.CLIENT_SECRET;
+  
+    res.send(`
+      <html>
+        <head>
+          <title>Podify</title>
+          <script>
+            // Inject the environment variables as JavaScript variables
+            window.clientId = '${clientId}';
+            window.clientSecret = '${clientSecret}';
+          </script>
+        </head>
+        <body>
+          <!-- Your HTML content -->
+        </body>
+      </html>
+    `);
 });
 
 
